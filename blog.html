@@ -1,0 +1,41 @@
+---
+layout: default
+title: Blog
+---
+
+<div class="blog">
+  <h1 class="page-heading">Blog Posts</h1>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        </h2>
+        
+        {% if site.show_excerpts %}
+          <div class="post-excerpt">
+            {{ post.excerpt }}
+            <a href="{{ post.url | relative_url }}">Read more...</a>
+          </div>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+
+  <!-- AdSense bottom ad -->
+  <div class="ad-container">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-format="fluid"
+         data-ad-layout-key="-gw-3+1f-3d+2z"
+         data-ad-client="ca-pub-YOUR_ADSENSE_ID"
+         data-ad-slot="YOUR_SLOT_ID"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+</div>
