@@ -5,14 +5,12 @@ description: >-
 baseurl: "" 
 url: "https://yourusername.github.io" 
 twitter_username: yourtwitter
-github_username:  yourgithub
+github_username: yourgithub
 
-# Build settings
 theme: minima
 plugins:
   - jekyll-feed
 
-# Exclude from processing
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -21,11 +19,3 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
-
-# Add this to explicitly include all necessary directories
-include:
-  - _includes
-  - _layouts
-  - _posts
-  - css
-  - js
