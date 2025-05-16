@@ -1,0 +1,42 @@
+---
+layout: default
+---
+
+<div class="home">
+  {% if site.posts.size > 0 %}
+    <h2 class="post-list-heading">Recent Posts</h2>
+    <ul class="post-list">
+      {% for post in site.posts limit:3 %}
+        <li>
+          <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+          <h3>
+            <a class="post-link" href="{{ post.url | relative_url }}">
+              {{ post.title | escape }}
+            </a>
+          </h3>
+          {% if site.show_excerpts %}
+            {{ post.excerpt }}
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+    
+    <div class="view-more">
+      <a href="{{ "/blog.html" | relative_url }}" class="btn">View More Posts</a>
+    </div>
+  {% endif %}
+  
+  <!-- AdSense banner ad -->
+  <div class="ad-container">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-YOUR_ADSENSE_ID"
+         data-ad-slot="YOUR_SLOT_ID"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+</div>
