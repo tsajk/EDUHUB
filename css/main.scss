@@ -1,0 +1,130 @@
+---
+---
+
+@import "minima";
+
+$spacing-unit: 30px;
+$content-width: 800px;
+$on-palm: 600px;
+$on-laptop: 800px;
+
+// Custom styles
+.site-header {
+  border-top: 5px solid #424242;
+  border-bottom: 1px solid #e8e8e8;
+  min-height: 56px;
+  position: relative;
+  background-color: #f9f9f9;
+}
+
+.site-title {
+  font-size: 26px;
+  font-weight: 300;
+  line-height: 56px;
+  letter-spacing: -1px;
+  margin-bottom: 0;
+  float: left;
+  color: #333;
+  
+  &:hover {
+    text-decoration: none;
+    color: #111;
+  }
+}
+
+.post-list {
+  margin-left: 0;
+  list-style: none;
+  
+  > li {
+    margin-bottom: $spacing-unit;
+    padding-bottom: $spacing-unit/2;
+    border-bottom: 1px solid #eee;
+  }
+}
+
+.post-meta {
+  font-size: $small-font-size;
+  color: $grey-color;
+}
+
+.post-link {
+  display: block;
+  font-size: 24px;
+  color: #333;
+  
+  &:hover {
+    color: #111;
+    text-decoration: none;
+  }
+}
+
+.post-content {
+  margin-bottom: $spacing-unit;
+  
+  h2 {
+    font-size: 32px;
+    margin-top: $spacing-unit;
+  }
+  
+  h3 {
+    font-size: 26px;
+    margin-top: $spacing-unit;
+  }
+  
+  h4 {
+    font-size: 20px;
+    margin-top: $spacing-unit;
+  }
+}
+
+// Ad containers
+.ad-container {
+  margin: 40px 0;
+  text-align: center;
+}
+
+// Responsive design
+@media screen and (max-width: $on-laptop) {
+  .site-header {
+    text-align: center;
+  }
+  
+  .site-nav {
+    position: static;
+    float: none;
+    line-height: 56px;
+  }
+  
+  .trigger {
+    display: none;
+  }
+  
+  .nav-trigger + label {
+    display: block;
+  }
+  
+  .menu-icon {
+    display: block;
+    float: right;
+    width: 36px;
+    height: 26px;
+    line-height: 0;
+    padding-top: 10px;
+    text-align: center;
+  }
+  
+  .menu-icon > svg path {
+    fill: #424242;
+  }
+  
+  input ~ .trigger {
+    clear: both;
+    display: none;
+  }
+  
+  input:checked ~ .trigger {
+    display: block;
+    padding-bottom: 5px;
+  }
+}
