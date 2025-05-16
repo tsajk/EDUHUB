@@ -21,3 +21,11 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+
+# Add this to explicitly include all necessary directories
+include:
+  - _includes
+  - _layouts
+  - _posts
+  - css
+  - js
