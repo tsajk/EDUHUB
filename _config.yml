@@ -1,0 +1,23 @@
+title: Your Awesome Site
+email: your-email@example.com
+description: >- 
+  A great blog about interesting topics
+baseurl: "" 
+url: "https://yourusername.github.io" 
+twitter_username: yourtwitter
+github_username:  yourgithub
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
